@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doçura & Encanto</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png"> <!-- Favicon -->
+</head>
+<body>
+  <!-- Navegação -->
+  <nav class="container-fluid">
+    <ul><li><strong>Doçura & Encanto</strong></li></ul>
+    <ul>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato" role="button">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner principal -->
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Bem-vindo à Doçura & Encanto</h2>
+          <h3>Doces mágicos para momentos especiais</h3>
+        </hgroup>
+        <figure>
+          <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\Banner principal mágico.png" alt="Banner principal mágico" /> <!-- Banner -->
+          <figcaption>Doçura & Encanto</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <!-- Cardápio -->
+  <section id="cardapio" class="container cardapio">
+    <h2>Nosso Cardápio</h2>
+
+    <!-- Categoria: Bolos & Tortas -->
+    <h3>🎂 Bolos & Tortas</h3>
+    <div class="grid">
+      <!-- Bolo Decorado -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\bolo decorado.png" alt="Bolo mágico" />
+        <h3>Bolo Decorado</h3>
+        <p>Bolos mágicos para festas e celebrações. <br>Tamanhos: P, M, G.</p>
+        <select id="bolo-size">
+          <option value="P-30">P - R$30</option>
+          <option value="M-50">M - R$50</option>
+          <option value="G-80">G - R$80</option>
+        </select>
+        <button onclick="addToCart('Bolo Decorado', document.getElementById('bolo-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Torta de Frutas -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\torta de morango.png" alt="Torta mágica" />
+        <h3>Torta de Frutas</h3>
+        <p>Tortas artesanais encantadas. <br>Tamanhos: P, M, G.</p>
+        <select id="torta-size">
+          <option value="P-20">P - R$20</option>
+          <option value="M-35">M - R$35</option>
+          <option value="G-50">G - R$50</option>
+        </select>
+        <button onclick="addToCart('Torta de Frutas', document.getElementById('torta-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Cheesecake -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\chesecake.png" alt="Cheesecake mágico" />
+        <h3>Cheesecake Encantado</h3>
+        <p>Clássico cheesecake com toque mágico. <br>Tamanhos: P, M, G.</p>
+        <select id="cheesecake-size">
+          <option value="P-22">P - R$22</option>
+          <option value="M-38">M - R$38</option>
+          <option value="G-55">G - R$55</option>
+        </select>
+        <button onclick="addToCart('Cheesecake Encantado', document.getElementById('cheesecake-size').value)">Adicionar</button>
+      </article>
+    </div>
+
+    <!-- Categoria: Docinhos & Cupcakes -->
+    <h3>🧁 Docinhos & Cupcakes</h3>
+    <div class="grid">
+      <!-- Cupcakes -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\cupcake.png" alt="Cupcakes mágicos" />
+        <h3>Cupcakes Encantados</h3>
+        <p>Deliciosos cupcakes com cobertura mágica. <br>Tamanhos: P, M, G.</p>
+        <select id="cupcake-size">
+          <option value="P-5">P - R$5</option>
+          <option value="M-9">M - R$9</option>
+          <option value="G-15">G - R$15</option>
+        </select>
+        <button onclick="addToCart('Cupcakes Encantados', document.getElementById('cupcake-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Docinhos -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\docinhos de festa.png" alt="Docinhos mágicos" />
+        <h3>Docinhos de Festa</h3>
+        <p>Brigadeiros, beijinhos e mais. <br>Tamanhos: P, M, G.</p>
+        <select id="docinho-size">
+          <option value="P-10">P - R$10</option>
+          <option value="M-18">M - R$18</option>
+          <option value="G-25">G - R$25</option>
+        </select>
+        <button onclick="addToCart('Docinhos de Festa', document.getElementById('docinho-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Macarons -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\macarons coloridos.png" alt="Macarons mágicos" />
+        <h3>Macarons Coloridos</h3>
+        <p>Macarons delicados em sabores variados. <br>Tamanhos: P, M, G.</p>
+        <select id="macaron-size">
+          <option value="P-15">P - R$15</option>
+          <option value="M-25">M - R$25</option>
+          <option value="G-40">G - R$40</option>
+        </select>
+        <button onclick="addToCart('Macarons Coloridos', document.getElementById('macaron-size').value)">Adicionar</button>
+      </article>
+    </div>
+
+    <!-- Categoria: Sobremesas Especiais -->
+    <h3>🍮 Sobremesas Especiais</h3>
+    <div class="grid">
+      <!-- Brownies -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\brownie.png" alt="Brownies mágicos" />
+        <h3>Brownies Encantados</h3>
+        <p>Brownies fofinhos e irresistíveis. <br>Tamanhos: P, M, G.</p>
+        <select id="brownie-size">
+          <option value="P-7">P - R$7</option>
+          <option value="M-12">M - R$12</option>
+          <option value="G-20">G - R$20</option>
+        </select>
+        <button onclick="addToCart('Brownies Encantados', document.getElementById('brownie-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Cookies -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\cookie de chocolate.png" alt="Cookies mágicos" />
+        <h3>Cookies de Chocolate</h3>
+        <p>Cookies crocantes e recheados. <br>Tamanhos: P, M, G.</p>
+        <select id="cookie-size">
+          <option value="P-8">P - R$8</option>
+          <option value="M-14">M - R$14</option>
+          <option value="G-22">G - R$22</option>
+        </select>
+        <button onclick="addToCart('Cookies de Chocolate', document.getElementById('cookie-size').value)">Adicionar</button>
+      </article>
+
+      <!-- Pudim -->
+      <article>
+        <img src="C:\Users\marga\OneDrive\Documentos\A.L.C\Free Lancer\PORTIFOLIO\SITE DOÇURA & ENCANTO\imagens\pudim.png" alt="Pudim mágico" />
+        <h3>Pudim Encantado</h3>
+        <p>Pudim cremoso que derrete na boca. <br>Tamanhos: P, M, G.</p>
+        <select id="pudim-size">
+          <option value="P-10">P - R$10</option>
+          <option value="M-18">M - R$18</option>
+          <option value="G-28">G - R$28</option>
+        </select>
+        <button onclick="addToCart('Pudim Encantado', document.getElementById('pudim-size').value)">Adicionar</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Carrinho -->
+  <div class="cart" id="cart">
+    <h3>🛒 Carrinho</h3>
+    <ul id="cart-items"></ul>
+    <p><strong>Total: R$ <span id="total">0</span></strong></p>
+    <button onclick="generateNF()">Gerar Nota Fiscal</button>
+    <div class="nf-box" id="nf-box" style="display:none;"></div>
+    <button id="copyBtn" style="display:none;" onclick="copyNF()">Copiar NF e Enviar WhatsApp</button>
+  </div>
+
+  <!-- Sobre -->
+  <section id="sobre" class="container">
+    <h2>Sobre Nós</h2>
+    <p>Na Doçura & Encanto, transformamos momentos em magia com doces feitos sob encomenda, festas e muito mais.</p>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="container">
+    <h2>Contato</h2>
+    <p>Faça já sua encomenda e adoce sua festa! <br>WhatsApp: <strong>(71) 9 8478-7255</strong></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="container">
+    <small><a href="#">Instagram</a> • <a href="#">Facebook</a></small>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

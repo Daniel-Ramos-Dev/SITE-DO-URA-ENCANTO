@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(to bottom right, #ef87d7, #e38ced);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animação de estrelinhas */
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.cardapio img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cart {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #ffffff;
+  border: 2px solid #f3a6d4;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.cart h3 {
+  margin-top: 0;
+}
+
+.nf-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff0fa;
+  border-radius: 8px;
+  font-family: monospace;
+  white-space: pre-line;
+}
